@@ -1,6 +1,6 @@
 var zip = angular.module('zipCode', []);
 
-app.controller('weatherCtrl', function($scope, $http) {
+zip.controller('weatherCtrl', function($scope, $http) {
 
     $scope.zip = [];
   
