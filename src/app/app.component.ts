@@ -25,8 +25,9 @@ export class AppComponent {
       console.log(data);
       this.data = data
     })
+    
   }
 }
-var weather = require('openweather-apis');
+
 
 
