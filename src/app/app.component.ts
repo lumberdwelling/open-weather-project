@@ -9,8 +9,8 @@ import 'rxjs/add/operator/map';
 })
 export class AppComponent {
   title = 'weather';
-  private apiUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=75063,us&APPID=4372f5664f2189869696f5af296fa35d';
-  data: Array<any>=[];
+  private apiUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=75063,us&units=imperial&APPID=4372f5664f2189869696f5af296fa35d';
+  data: any = {};
 
   constructor(private http: Http) {
     this.getWeather();
@@ -23,8 +23,10 @@ export class AppComponent {
   getWeather() {
     this.getData().subscribe(data => {
       console.log(data);
-      this.data = data.weather;
+      this.data = data
     })
   }
 }
+var weather = require('openweather-apis');
+
 
